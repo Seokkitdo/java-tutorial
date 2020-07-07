@@ -1,0 +1,34 @@
+package com.kh.variable;
+
+public class A_Variable { //기능 클래스
+	public void declareVariable() {
+		// 변수 선언 후 초기화
+		// A. 변수 선언 : 메모리 공간에 저장 공간만 생성
+		// 1. 논리형
+		boolean isTrue;
+		
+		
+		// 2. 문자형
+		// 2-1. 문자
+		char ch;
+		// 2-2. 문자열
+		String str;
+		
+		
+		// 3. 숫자형
+		// 3-1. 정수형
+		byte bNum;
+		short sNum;
+		int iNum;
+		long lNum;
+		// 3-2. 실수형
+		float fNum;
+		double dNum;
+		
+		// B. 초기화(대입)
+		isTrue = true; //boolean형이기 때문에 true/false만 저장 가능
+		
+		ch = 'A'; //한글자는 무조건 작은따옴표를 쓰고 그 안에 한 글자를 넣어둘 것
+		str = "ABCED"; //string형은 큰따옴표안에 한 글자를 넣든 여러 글자를 넣든 상관없다.
+	}
+}

@@ -1,0 +1,9 @@
+package com.kh.variable;
+
+public class A_Variable { //기능 클래스
+	public void declareVariable() {
+		// 변수 선언 후 초기화
+		int n = 10;
+		System.out.println("h1");
+	}
+}

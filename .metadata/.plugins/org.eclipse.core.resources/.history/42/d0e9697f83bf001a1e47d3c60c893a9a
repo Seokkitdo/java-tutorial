@@ -1,0 +1,9 @@
+package com.kh.variable;
+
+public class C_Cast {
+	public void rule1() {
+		int num = 'a';
+		//int 는 4byte <- char은 2byte : 자동형변환           	2byte -> 4byte
+		System.out.println("num : " + num);
+	}
+}

@@ -1,0 +1,19 @@
+package com.kh.variable;
+
+public class C_Cast {
+	public void rule1() {
+		int num = 'a';
+		//int 는 4byte <- char은 2byte : 자동형변환           	2byte -> 4byte
+		System.out.println("num : " + num);
+		
+		char c = 65; //리터럴이기때문에 가능 char의 범위만 안 벗어나면 된다
+		//2byte   4byte
+		System.out.println("c : " + c);
+		
+//		char c2 = num; //int형 변수이기 때문에 에러가 생긴다. 강제형변환 필요
+		char c2 = (char)num;
+		System.out.println("c2 : " + c2.getClass().getName());
+		//위에 char c = 65가 오류가 안나는 이유는 그 값 자체 즉 char형의 범위
+		//안에 포함되어있기 때문에 오류가 생기지 않는다. 
+	}
+}
