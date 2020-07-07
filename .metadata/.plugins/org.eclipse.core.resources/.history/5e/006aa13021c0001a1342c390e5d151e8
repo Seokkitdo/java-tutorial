@@ -1,0 +1,8 @@
+package com.kh.variable;
+
+public class D_Print {
+	public void printlnExample() {
+		
+	}
+
+}
