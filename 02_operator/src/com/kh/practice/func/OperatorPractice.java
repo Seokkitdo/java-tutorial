@@ -162,7 +162,7 @@ public class OperatorPractice {
 		String result2 = bSalary >= 3000 ? "3000 이상" : "3000 미만";
 		System.out.println(result2);
 		
-		System.out.println("C사원 연봉/연봉+a : " + cSalary+ "/ " + String.format("%.13f", ctotal));
+		System.out.printf("C사원 연봉/연봉+a : " + cSalary+ "/ " + "%.13f", ctotal);
 		String result3 = cSalary+cSalary*0.15 >= 3000 ? "3000 이상" : "3000 미만";
 		System.out.println(result3);
 	}
