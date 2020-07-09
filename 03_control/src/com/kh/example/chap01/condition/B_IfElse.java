@@ -69,8 +69,8 @@ public class B_IfElse {
 			System.out.println("본인입니다");
 		} else {
 			System.out.println("본인이 아닙니다");
-		}
-		
-		
+		}	
 	}
+	
+	
 }
