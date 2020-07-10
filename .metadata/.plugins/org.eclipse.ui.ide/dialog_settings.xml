@@ -16,6 +16,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\1_Java_workspace\02_operator\src\com\kh\practice"/>
 			<item value="D:\1_Java_workspace\01_variable\src\com\kh\practive1"/>
 			<item value="D:\1_Java_workspace"/>
 		</list>
