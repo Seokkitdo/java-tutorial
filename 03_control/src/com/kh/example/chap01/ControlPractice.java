@@ -174,7 +174,6 @@ public class ControlPractice {
 			switch(op) {
 			case '+':
 				result = num1 + num2;
-				
 				break;
 			case '-':
 				result = num1 - num2;
@@ -206,7 +205,7 @@ public class ControlPractice {
 		double mtest = sc.nextDouble();
 		
 		System.out.print("기말 고사 점수 : ");
-		double ltest = sc.nextDouble();
+		double ftest = sc.nextDouble();
 		
 		System.out.print("과제 점수 : ");
 		double ascore = sc.nextDouble();
@@ -217,29 +216,77 @@ public class ControlPractice {
 		System.out.println("=============== 결 과 ===============");
 		
 		double mtotal = mtest * 0.2;
-		double ltotal = ltest * 0.3;
+		double ltotal = ftest * 0.3;
 		double atotal = ascore * 0.3;
 		
 		double alltotal = mtotal + ltotal + atotal + attend;
 		
 		
 		
-		if(alltotal >= 70 && attend >= 15) {
-			System.out.println("중간 고사 점수(20) : " + mtest * 0.2);
-			System.out.println("기말 고사 점수(30) : " + ltest * 0.3);
-			System.out.println("과제 점수 (30) : " + ascore * 0.3);
-			System.out.println("출석 점수 (20) : " + attend);
-			System.out.println("총점 : " + alltotal);
-			System.out.println("PASS");
-		} else if(20-attend >= 6) {
-			System.out.printf("Fail [출석 회수 부족 (%d/20)]", (int)attend);
-		}else if(alltotal < 70 ) {
-			System.out.println("중간 고사 점수(20) : " + mtest * 0.2);
-			System.out.println("기말 고사 점수(30) : " + ltest * 0.3);
-			System.out.println("과제 점수 (30) : " + ascore * 0.3);
-			System.out.println("출석 점수 (20) : " + attend);
-			System.out.println("총점 : " + alltotal);
-			System.out.print("Fail [점수 미달]");
-		} 
+		if(attend >= 15 ) {
+			System.out.println("중간 고사 점수(20) : " + mtest);
+			System.out.println("기말 고사 점수(30) : " + ftest);
+			System.out.println("과제 점수       (30) : " + ascore);
+			System.out.println("출석 점수       (20) : " + attend);
+			System.out.println("총점    : " + alltotal);
+			if(alltotal >= 70) {
+				System.out.println("Pass");
+			} else {
+				System.out.println("Fail [점수 미달]");
+			}
+		} else {
+			System.out.println("Fail [출석 회수 부족(" + attend + "/20)]");
+		}
+	}
+	
+	public void practice10() {
+		Scanner sc = new Scanner(System.in);
+
+
+		System.out.println("실행할 기능을 선택하세요.");
+		System.out.println("1. 메뉴 출력");
+		System.out.println("2. 짝수/홀수");
+		System.out.println("3. 합격/불합격");
+		System.out.println("4. 계절");
+		System.out.println("5. 로그인");
+		System.out.println("6. 권한 확인");
+		System.out.println("7. BMI");
+		System.out.println("8. 계산기");
+		System.out.println("9. P/F");
+		System.out.printf("선택 : ");
+		int select = sc.nextInt();
+		System.out.printf("(실습문제%d 실행)", select);
+		System.out.println();
+		switch(select) {
+		case 1:
+			practice1();
+			break;
+		case 2:
+			practice2();
+			break;
+		case 3:
+			practice3();
+			break;
+		case 4:
+			practice4();
+			break;
+		case 5:
+			practice5();
+			break;
+		case 6:
+			practice6();
+			break;
+		case 7:
+			practice7();
+			break;
+		case 8:
+			practice8();
+			break;
+		case 9:
+			practice9();
+			break;
+		default:
+			break;
+		}
 	}
 }
