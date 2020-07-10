@@ -102,12 +102,98 @@ public class B_While {
 			
 			System.out.print(i);
 			if(i < random) {
-				System.out.print("+");
+				System.out.print(" + ");
 			}else {
-				System.out.print("=");
+				System.out.print(" = ");
 			}
 			++i;
 		}System.out.println(sum);
-		System.out.println("약간 수정");
+		
+	}
+	public void method6() {
+		// 문자열을 입력 받아 인덱스 별로 문자 출력
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("문자열 입력 : ");
+		String str = sc.nextLine();
+		
+		System.out.println("내가 입력한 문자열 : " + str);
+		for(int i = 0; i < str.length(); i++) { // str.length() 반환값은 int이며 내가 입력한 문자열의 길이가 그 반환값이다. apple면 5가 반환됌.
+			char ch = str.charAt(i);
+			System.out.println(i + " : " + ch);
+		}
+		
+		int i = 0;
+		while(i < str.length()) {
+			char ch = str.charAt(i);
+			System.out.println(i + " : " + ch);
+			i++;
+		}
+	}
+	
+	public void method7() {
+		// 2단ㄴ부터 9단까지 출력
+		int i = 2;
+		
+		while(i <= 9) {
+			int j = 1;
+			while(j <= 9) {
+				System.out.println(i + " X " + j + " = " + i * j);
+				j++;
+			}
+			i++;
+		}
+	}
+	
+	public void method8() {
+		// 아날로그 시계
+		int i = 0;
+		while( i <= 23) {
+			int j = 0;
+			while(j <= 59) {
+				System.out.println(i + "시" + j + "분입니다");
+				j++;
+			}i++;
+		}
+	}
+	
+	public void method9() {
+		
+	}
+	
+	public void method10() {
+		
+	}
+	
+	public void method11() {
+		Scanner sc = new Scanner(System.in);
+		
+		int menu = 0;
+		while(menu != 9) {
+			System.out.println("1. 1~5출력");
+			System.out.println("2. 5~1출력");
+			System.out.println("3. 1~10사이 홀수 출력");
+			System.out.println("9. 종료");
+			System.out.print("메뉴번호 : ");
+			menu = sc.nextInt();
+			
+			switch(menu) {
+			case 1:
+				method1();
+				break;
+			case 2:
+				method2();
+				break;
+			case 3:
+				method3();
+				break;
+			case 9:
+				System.out.println("종료합니다.");
+			default:
+				System.out.println("잘못 입력하셨습니다.");
+			}
+		}
+		
+		
 	}
 }
