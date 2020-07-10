@@ -108,5 +108,6 @@ public class B_While {
 			}
 			++i;
 		}System.out.println(sum);
+		System.out.println("약간 수정");
 	}
 }
