@@ -196,4 +196,46 @@ public class B_While {
 		
 		
 	}
+	
+	public void method12() {
+		Scanner sc = new Scanner(System.in);
+		
+//		while(true) { //무한 반복문
+//
+//			System.out.println("1. 1~5 출력");
+//			System.out.println("2. 5~1 출력");
+//			System.out.println("3. 1~10 중 홀수만 출력");
+//			System.out.println("9. 종료");
+//			System.out.print("메뉴 선택 : ");
+//			int menu = sc.nextInt();
+//			
+//			switch(menu) {
+//			case 1: method1(); break;
+//			case 2: method2(); break;
+//			case 3: method3(); break;
+//			case 9: System.out.println("종료합니다"); return; //나를 불러준 메소드로 되돌아간다 여기서는 run에 있는 main 메소드
+//			default : System.out.println("잘못 입력하셨습니다.");
+//			}
+//		}
+//		System.out.println("ㅎ2");  이 코드가 에러가 나는 이유는 위에 while문이 무한 반복이기 때문에
+		//위에 코드까지 도달할 수 가 없이 때문이다
+		int menu = 0;
+		do { //무한 반복문
+
+			System.out.println("1. 1~5 출력");
+			System.out.println("2. 5~1 출력");
+			System.out.println("3. 1~10 중 홀수만 출력");
+			System.out.println("9. 종료");
+			System.out.print("메뉴 선택 : ");
+			menu = sc.nextInt();
+			
+			switch(menu) {
+			case 1: method1(); break;
+			case 2: method2(); break;
+			case 3: method3(); break;
+			case 9: System.out.println("종료합니다"); return; //나를 불러준 메소드로 되돌아간다 여기서는 run에 있는 main 메소드
+			default : System.out.println("잘못 입력하셨습니다.");
+			}
+		}while(menu != 0);
+	}
 }
