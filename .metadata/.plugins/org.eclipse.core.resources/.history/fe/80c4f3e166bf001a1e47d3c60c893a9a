@@ -1,7 +1,0 @@
-package com.kh.variable;
-
-public class A_Variable { //기능 클래스
-	public void declareVariable() {
-		System.out.println("hi");
-	}
-}
