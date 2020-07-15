@@ -4,4 +4,5 @@
 <fullyQualifiedTypeName name="com.kh.variable.B_Constant"/>
 <fullyQualifiedTypeName name="com.kh.example.chap01.condition.A_If"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
