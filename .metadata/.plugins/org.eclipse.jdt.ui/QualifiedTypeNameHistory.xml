@@ -14,4 +14,5 @@
 <fullyQualifiedTypeName name="com.kh.example.practice6.model.vo.Book"/>
 <fullyQualifiedTypeName name="com.kh.homework.shape.model.vo.Shape"/>
 <fullyQualifiedTypeName name="com.kh.practice.student.controller.StudentController"/>
+<fullyQualifiedTypeName name="com.kh.example.test.model.vo.Parent"/>
 </qualifiedTypeNameHistroy>
