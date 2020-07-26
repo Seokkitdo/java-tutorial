@@ -5,6 +5,11 @@ public class V40 extends SmartPhone implements NotePen{
 	public String makeCall() {
 		return "";
 	}
+	@Override
+	public void setMaker(String maker) {
+		// TODO Auto-generated method stub
+		super.setMaker("LG");
+	}
 	public String takeCall() {
 		return "";
 	}
