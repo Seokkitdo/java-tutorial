@@ -36,6 +36,6 @@ public abstract class Family {
 		return name + ", " + weight + ", " + health;
 	}
 	
-	public abstract void eat();
-	public abstract void sleep();
+//	public abstract void eat();
+//	public abstract void sleep();
 }

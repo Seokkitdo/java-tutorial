@@ -1,6 +1,6 @@
 package com.kh.example.chap02_abst.family.model.vo;
 
-public class Mother extends Family{
+public class Mother extends Family implements Basic{
 	private String babyBirth;
 	
 	public Mother() {}
