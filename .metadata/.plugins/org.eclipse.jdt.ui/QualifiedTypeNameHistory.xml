@@ -15,4 +15,5 @@
 <fullyQualifiedTypeName name="com.kh.homework.shape.model.vo.Shape"/>
 <fullyQualifiedTypeName name="com.kh.practice.student.controller.StudentController"/>
 <fullyQualifiedTypeName name="com.kh.example.test.model.vo.Parent"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
 </qualifiedTypeNameHistroy>

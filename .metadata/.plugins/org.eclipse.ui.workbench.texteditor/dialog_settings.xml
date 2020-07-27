@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="f"/>
 			<item value="Kind"/>
 			<item value="kind"/>
 			<item value="public void setKind(String kind) {"/>
