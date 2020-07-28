@@ -7,18 +7,24 @@ public class MemberController {
 	private Member[] m =new Member[SIZE];
 	
 	public int existMemberNum() {
-		return m.length;
-	}
-	public boolean checkId(String input) {
-		boolean result=false;
-		for(int i=0; i<m.length; ++i) {
-			if(m[i].getId().equals(input)) {
-				result = true;
-			}else {
-				result = false;
+		int count = 0;
+		for(int i = 0; i < m.length; i++) {
+			if(m[i] != null) {
+				count++;
 			}
 		}
-		return result;
+		return count;
+	}
+	
+	public boolean checkId(String inputId) {
+		for(int i = 0; i < m.length; i++) {
+			if(m[i] != null) {
+				if(m[i].getId().equals(inputId)) {
+					return false;
+				}
+			}
+		}
+		return true;
 	}
 	public void insertMember(String id, String name, String password, String email, char gender, int age) {
 		int index=0;
@@ -52,24 +58,67 @@ public class MemberController {
 		return result;
 	}
 	public Member[] searchEmail(String email) {
-		
+		Member[] result = new Member[SIZE];
+		for(int i=0; i<m.length; ++i) {
+			if(m[i]!=null) {
+				if(m[i].getEmail().equals(email)) {
+					result[i] = m[i];
+				}
+			}
+		}
+		return result;
 	}
 	public boolean updatePassword(String id, String password) {
+		for(int i=0; i<m.length; ++i) {
+			if(m[i]!= null) {
+				if(m[i].getId().equals(id)){
+					m[i].setPassword(password);
+					return true;
+				}
+			}
+		}
+		return false;
 		
 	}
 	public boolean updateName(String id, String name) {
-		
+		for(int i =0; i<m.length; ++i) {
+			if(m[i] != null) {
+				if(m[i].getId().equals(id)) {
+					m[i].setName(name);
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	public boolean updateEmail(String id, String email) {
-		
+		for(int i=0; i<m.length; ++i) {
+			if(m[i]!=null) {
+				if(m[i].getId().equals(id)) {
+					m[i].setEmail(email);
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	public boolean delete(String id) {
-		
+		for(int i=0; i<m.length; ++i) {
+			if(m[i] !=null) {
+				if(m[i].getId().equals(id)) {
+					m[i] = null;
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	public void delete() {
-		
+		for (int i = 0; i < m.length; i++) {
+			m[i] = null;
+		}
 	}
 	public Member[] printAll() {
-		
+		return m;
 	}
 }
