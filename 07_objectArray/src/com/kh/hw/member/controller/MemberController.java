@@ -10,7 +10,7 @@ public class MemberController {
 		return m.length;
 	}
 	public boolean checkId(String input) {
-		boolean result = true;
+		boolean result=false;
 		for(int i=0; i<m.length; ++i) {
 			if(m[i].getId().equals(input)) {
 				result = true;
@@ -20,8 +20,8 @@ public class MemberController {
 		}
 		return result;
 	}
-	public void insertMember(String id, String name, String password, String email, String gender, int age) {
-		int index;
+	public void insertMember(String id, String name, String password, String email, char gender, int age) {
+		int index=0;
 		for(int i=0; i<m.length; ++i) {
 			if(m[i] == null) {
 				index = i;
@@ -31,10 +31,25 @@ public class MemberController {
 		m[index] = new Member(id, name, password, email, gender, age);
 	}
 	public String searchId(String id) {
-		
+		for(int i=0; i<m.length; ++i) {
+			if(m[i] != null) {
+				if(m[i].getId().equals(id)) {
+					return m[i].inform();
+				}
+			}
+		}
+		return null;
 	}
 	public Member[] searchName(String name) {
-		
+		Member[] result = new Member[SIZE];
+		for(int i=0; i<m.length; ++i) {
+			if(m[i] != null) {
+				if(m[i].getName().equals(name)) {
+					result[i] = m[i];
+				}
+			}
+		}
+		return result;
 	}
 	public Member[] searchEmail(String email) {
 		

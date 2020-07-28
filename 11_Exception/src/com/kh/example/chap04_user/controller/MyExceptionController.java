@@ -1,0 +1,31 @@
+package com.kh.example.chap04_user.controller;
+
+import java.util.Scanner;
+
+import com.kh.example.chap04_user.model.exception.MyException;
+
+public class MyExceptionController {
+	public void inputAge() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이를 입력 하세요 : ");
+		int age = sc.nextInt();
+		
+		try {
+			checkAge(age);
+		} catch (MyException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void checkAge(int age) throws MyException {
+		if(age < 19) {
+			throw new MyException("만 19세 미만은 입장이 불가합니다.");
+		}else {
+			System.out.println("즐거운 관람 되세요^^");
+		}
+		
+	}
+}

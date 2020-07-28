@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="com.kh.example.chap01.condition.A_If"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.kh.example.practice1.model.vo.Member"/>
 <fullyQualifiedTypeName name="com.kh.example.chap04_field.model.vo.Product"/>
 <fullyQualifiedTypeName name="com.kh.example.practice2.model.vo.Product"/>
@@ -16,4 +15,8 @@
 <fullyQualifiedTypeName name="com.kh.practice.student.controller.StudentController"/>
 <fullyQualifiedTypeName name="com.kh.example.test.model.vo.Parent"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="com.kh.hw.member.model.vo.Member"/>
+<fullyQualifiedTypeName name="com.kh.example.chap01_String.controller.StringController"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
 </qualifiedTypeNameHistroy>

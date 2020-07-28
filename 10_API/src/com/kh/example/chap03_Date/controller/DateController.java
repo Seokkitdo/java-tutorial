@@ -77,5 +77,6 @@ public class DateController {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd E요일 a hh시 mm분 ss초");
 		String fmt = sdf.format(endDay);
 		System.out.println(fmt);
+	
 	}
 }
