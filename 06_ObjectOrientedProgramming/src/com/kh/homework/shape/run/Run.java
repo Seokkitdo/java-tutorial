@@ -1,10 +1,10 @@
 package com.kh.homework.shape.run;
 
+import com.kh.homework.shape.view.ShapeMenu;
+
 public class Run {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		new ShapeMenu().inputMenu();
 	}
-
 }

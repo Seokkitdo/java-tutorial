@@ -7,14 +7,21 @@ public class Shape {
 	private String color = "white";
 	
 	public Shape() {}
+	
 	public Shape(int type, double height, double width) {
 		this.type = type;
 		this.height = height;
 		this.width = width;	
 	}
 	
-	public String inform(double height, double width, String color) {
-		return color;
+	public String inform() {
+		String realType = null;
+		if(type == 3) {
+			realType = "삼각형";
+		} else {
+			realType = "사각형";
+		}
+		return "type : " + realType + " / height : " + height + " / width : " + width + " / color : " + color; 
 	}
 	
 	
