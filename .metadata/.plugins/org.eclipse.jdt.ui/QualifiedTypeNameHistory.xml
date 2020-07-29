@@ -4,7 +4,6 @@
 <fullyQualifiedTypeName name="com.kh.variable.B_Constant"/>
 <fullyQualifiedTypeName name="com.kh.example.chap01.condition.A_If"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="com.kh.example.practice1.model.vo.Member"/>
 <fullyQualifiedTypeName name="com.kh.example.chap04_field.model.vo.Product"/>
 <fullyQualifiedTypeName name="com.kh.example.practice2.model.vo.Product"/>
@@ -15,8 +14,20 @@
 <fullyQualifiedTypeName name="com.kh.practice.student.controller.StudentController"/>
 <fullyQualifiedTypeName name="com.kh.example.test.model.vo.Parent"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
-<fullyQualifiedTypeName name="com.kh.hw.member.model.vo.Member"/>
 <fullyQualifiedTypeName name="com.kh.example.chap01_String.controller.StringController"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="com.kh.example.chap02_throws.controller.ThrowsController"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="com.kh.example.chap02_tryCatch.controller.TryCatchController"/>
+<fullyQualifiedTypeName name="javax.imageio.IIOException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.kh.example.chap04_user.model.exception.MyException"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.kh.example.chap04_user.controller.MyExceptionController"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="com.kh.example.chap00_file.controller.FileController"/>
+<fullyQualifiedTypeName name="com.kh.hw.member.model.vo.Member"/>
 </qualifiedTypeNameHistroy>
