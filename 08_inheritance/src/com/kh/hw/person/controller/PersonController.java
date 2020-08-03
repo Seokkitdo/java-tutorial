@@ -40,7 +40,7 @@ public class PersonController {
 				s[i].setGrade(grade);
 				s[i].setMajor(major);
 				break;
-			} else {
+			} else if(s[s.length] != null){
 				System.out.println("¸ñ·ÏÀÌ ²ËÃ¡½À´Ï´Ù.");
 			}
 		}
@@ -59,7 +59,7 @@ public class PersonController {
 				e[i].setWeight(weight);
 				e[i].setSalary(salary);
 				e[i].setDept(dept);
-			}else {
+			}else if(e[e.length] != null){
 				System.out.println("¸ñ·ÏÀÌ ²ËÃ¡½À´Ï´Ù");
 			}
 		}
