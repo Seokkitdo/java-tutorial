@@ -7,40 +7,35 @@ public class ShapeController {
 	
 	public double calcPerimeter(int type, double height, double width) {
 		s.setType(type);
-		s.setHeight(height);
+		s.setHeight(height);	
 		s.setWidth(width);
-		return (s.getHeight() + s.getWidth()) * 2 ;
+		
+		return (width + height) * 2;
+		
 	}
+	
 	public double calcArea(int type, double height, double width) {
 		s.setType(type);
 		s.setHeight(height);
 		s.setWidth(width);
-		
 		double result = 0.0;
 		if(type == 3) {
-			result = height * width * 0.5;
-		} else {
+			result =  (height * width) * 0.5;
+		}else if(type == 4) {
 			result = height * width;
 		}
 		
 		return result;
 	}
+	
 	public void paintColor(String color) {
 		s.setColor(color);
+		s.toString();
 	}
-	public String print(int type) {
-		String result = null;
-		String shape = type == 3 ? "삼각형" : "사각형";
-		
-		if(type != s.getType() || s.getHeight() == 0.0 || s.getWidth() == 0.0) {
-			result = shape + "의 높이 또는 너비가 설정되지 않았습니다.";
-			if(type != s.getType()) {
-				s.setColor("white");
-			} 
-		} else {
-			result = s.inform();
-		}
-		
-		return result; 
+	
+	@Override
+	public String toString() {
+		return "도형은" + s.getType() + s.toString();
 	}
+	
 }

@@ -46,7 +46,7 @@ public class ByteDAO {
       }
 
    
-   public void fileOPEN() {
+   public void fileOpen2() {
 	   try (FileInputStream fis = new FileInputStream("a_byte.txt")){
 		
 		   int value;

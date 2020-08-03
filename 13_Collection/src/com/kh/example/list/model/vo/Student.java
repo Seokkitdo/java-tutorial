@@ -70,13 +70,14 @@ public class Student implements Comparable<Student>{
 	@Override
 	public int compareTo(Student o) {
 		// 이름(String) 오름차순
-		String otherName = o.name;
-		int result = name.compareTo(otherName);
+//		String otherName = o.name;
+//		int result = name.compareTo(otherName);
 //				  	비교주체                    비교대상
 //		비교 주체가 비교 대상과 같으면 0 반환
 //		비교 주체가 비교 대상보다 크면 1반환
 //		비교 주체가 비교 대상보다 작으면 -1반환
-		return result;
+//		return result;
+		return this.name.compareTo(o.name);
 	}
 	
 	

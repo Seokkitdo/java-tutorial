@@ -64,31 +64,31 @@ public class ListController {
 		
 		//set(int index, E e) : index번째에 있는 요소를 e로 수정
 		
-		list.set(2, new Student("도대담", 60));
-		System.out.println("list : " + list);
-		
+//		list.set(2, new Student("도대담", 60));
+//		System.out.println("list : " + list);
+//		
 		// get(int index) : index번째에 있는 요소를 가지고 옴
-		Student s = list.get(2);
-		System.out.println(s);
-		System.out.println("list : " + list);
+//		Student s = list.get(2);
+//		System.out.println(s);
+//		System.out.println("list : " + list);
 		
 		// subList(int index1, int index2) : index1번째부터 index2번째까지의 리스트 반환
-		System.out.println(list.subList(2,5));
+//		System.out.println(list.subList(2,5));
 		
 		// contains(Object o) : o가 리스트에 존재한다면 true 반환
 		// indexOf(Object o ) : o가 리스트에 위치하는 인덱스 반환
-		boolean bool = list.contains(new Student("남나눔", 90));
-		System.out.println(bool);
-		int index = list.indexOf(new Student("남나눔", 90));
-		System.out.println(index);
-		int index2 = list.indexOf(new Student("테스트", 0));
-		System.out.println(index2);
-		
-		// clear() : 저장된 모든 객체 삭제
-		// isEmpty() : 리스트가 비어있으면 true반환
-		System.out.println("list : " + list);
-		list.clear();
-		System.out.println("list : " +list);
-		System.out.println("list가 비어있나요? : " + list.isEmpty());
+//		boolean bool = list.contains(new Student("남나눔", 90));
+//		System.out.println(bool);
+//		int index = list.indexOf(new Student("남나눔", 90));
+//		System.out.println(index);
+//		int index2 = list.indexOf(new Student("테스트", 0));
+//		System.out.println(index2);
+//		
+//		// clear() : 저장된 모든 객체 삭제
+//		// isEmpty() : 리스트가 비어있으면 true반환
+//		System.out.println("list : " + list);
+//		list.clear();
+//		System.out.println("list : " +list);
+//		System.out.println("list가 비어있나요? : " + list.isEmpty());
 	}
 }

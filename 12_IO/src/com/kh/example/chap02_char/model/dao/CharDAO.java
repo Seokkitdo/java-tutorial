@@ -16,6 +16,7 @@ public class CharDAO {
 			fw.write("¿Í, IO Àç¹Õ´Ù");
 			fw.write('A');
 			fw.write(' ');
+	
 			char[] cArr = {'a', 'p', 'p', 'l', 'e'};
 			fw.write(cArr);
 		} catch (IOException e) {
