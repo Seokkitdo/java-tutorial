@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.kh.variable.A_Variable"/>
-<fullyQualifiedTypeName name="com.kh.variable.B_Constant"/>
-<fullyQualifiedTypeName name="com.kh.example.chap01.condition.A_If"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="com.kh.example.practice1.model.vo.Member"/>
 <fullyQualifiedTypeName name="com.kh.example.chap04_field.model.vo.Product"/>
@@ -58,4 +55,9 @@
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="java.util.Map.Entry"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.kh.example.education.model.vo.Student"/>
+<fullyQualifiedTypeName name="com.kh.hw.person.model.vo.Student"/>
+<fullyQualifiedTypeName name="java.net.InetAddress"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
 </qualifiedTypeNameHistroy>
