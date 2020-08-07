@@ -6,7 +6,7 @@ import com.kh.miniproject.foodcourt.model.vo.FoodCourt;
 
 public class FoodCourtController {
 	
-	ArrayList<FoodCourt> foodList = new ArrayList<FoodCourt>();
+	public ArrayList<FoodCourt> foodList = new ArrayList<FoodCourt>();
 	
 	public FoodCourtController() {
 		foodList.add(new FoodCourt("µ»¿Â¬Ó∞≥", 7000));
@@ -16,9 +16,12 @@ public class FoodCourtController {
 	}
 	
 	
-//	public void PrintkFood() {
-//		for(int i=0; i<foodList.size(); ++i) {
-//			System.out.println(foodList[i]);
-//		}
-//	}
+	public void PrintkFood() {
+		int j=1;
+		for(FoodCourt i : foodList) {
+			
+			System.out.println(j+". "+i);
+			j++;
+		}
+	}
 }

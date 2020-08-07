@@ -26,7 +26,7 @@ public class FoodCourt {
 	}
 	@Override
 	public String toString() {
-		return "메뉴 : " + menuname + "가격 : " + price;
+		return "메뉴 : " + menuname + "\t"+ "가격 : " + price;
 	}
 	
 }

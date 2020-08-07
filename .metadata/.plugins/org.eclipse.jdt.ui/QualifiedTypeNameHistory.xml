@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.imageio.IIOException"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="com.kh.example.chap04_user.model.exception.MyException"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+<fullyQualifiedTypeName name="com.kh.miniproject.foodcourt.model.vo.FoodCourt"/>
 </qualifiedTypeNameHistroy>
