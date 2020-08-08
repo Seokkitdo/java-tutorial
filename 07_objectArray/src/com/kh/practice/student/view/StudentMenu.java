@@ -13,6 +13,7 @@ public class StudentMenu {
 //		for(int i =0; i<stdArr.length; ++i) {
 //			System.out.println(stdArr[i].inform());
 //		}
+		
 		for(Student student:stdArr) {
 			System.out.println(student.inform());
 		}

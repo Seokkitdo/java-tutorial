@@ -4,21 +4,24 @@ import com.kh.hw.member.model.vo.Member;
 
 public class MemberController {
 	public final static int SIZE = 10;
-	private Member[] m =new Member[SIZE];
+	private Member[] m = new Member[SIZE];
 	
 	public int existMemberNum() {
-		int count = 0;
-		for(int i = 0; i < m.length; i++) {
+		int count=0;
+		for(int i=0; i<m.length; ++i) {
 			if(m[i] != null) {
-				count++;
-			}
+				++count;
+			} 
 		}
 		return count;
 	}
 	
 	public boolean checkId(String inputId) {
-		for(int i = 0; i < m.length; i++) {
-			if(m[i] != null) {
+		for(int i=0; i<m.length; ++i) {
+			if(m[i]==null) {
+				return true;
+			}
+			if(m[i].getId() != null) {
 				if(m[i].getId().equals(inputId)) {
 					return false;
 				}
@@ -26,19 +29,22 @@ public class MemberController {
 		}
 		return true;
 	}
+	
 	public void insertMember(String id, String name, String password, String email, char gender, int age) {
-		int index=0;
+		int index = 0;
+		
 		for(int i=0; i<m.length; ++i) {
-			if(m[i] == null) {
+			if(m[i] != null) {
 				index = i;
-				break;
 			}
 		}
 		m[index] = new Member(id, name, password, email, gender, age);
 	}
+	
 	public String searchId(String id) {
-		for(int i=0; i<m.length; ++i) {
-			if(m[i] != null) {
+		
+		for(int i = 0; i< m.length; ++i) {
+			if(m[i] != null && m[i].getId() != null) {
 				if(m[i].getId().equals(id)) {
 					return m[i].inform();
 				}
@@ -46,10 +52,11 @@ public class MemberController {
 		}
 		return null;
 	}
+	
 	public Member[] searchName(String name) {
-		Member[] result = new Member[SIZE];
+		Member result[] = new Member[SIZE];
 		for(int i=0; i<m.length; ++i) {
-			if(m[i] != null) {
+			if(m[i] != null && m[i].getName() != null) {
 				if(m[i].getName().equals(name)) {
 					result[i] = m[i];
 				}
@@ -57,10 +64,12 @@ public class MemberController {
 		}
 		return result;
 	}
+	
 	public Member[] searchEmail(String email) {
 		Member[] result = new Member[SIZE];
+		
 		for(int i=0; i<m.length; ++i) {
-			if(m[i]!=null) {
+			if(m[i].getEmail() != null) {
 				if(m[i].getEmail().equals(email)) {
 					result[i] = m[i];
 				}
@@ -68,21 +77,23 @@ public class MemberController {
 		}
 		return result;
 	}
+	
 	public boolean updatePassword(String id, String password) {
-		for(int i=0; i<m.length; ++i) {
-			if(m[i]!= null) {
-				if(m[i].getId().equals(id)){
+		for(int i=0; i<m.length; ++i) {	
+			if(m[i].getId() != null) {
+				
+				if(m[i].getId().equals(id)) {
 					m[i].setPassword(password);
 					return true;
 				}
 			}
 		}
 		return false;
-		
 	}
+	
 	public boolean updateName(String id, String name) {
-		for(int i =0; i<m.length; ++i) {
-			if(m[i] != null) {
+		for(int i=0; i<m.length; ++i) {
+			if(m[i].getId() != null) {
 				if(m[i].getId().equals(id)) {
 					m[i].setName(name);
 					return true;
@@ -91,9 +102,10 @@ public class MemberController {
 		}
 		return false;
 	}
+	
 	public boolean updateEmail(String id, String email) {
 		for(int i=0; i<m.length; ++i) {
-			if(m[i]!=null) {
+			if(m[i].getId() != null) {
 				if(m[i].getId().equals(id)) {
 					m[i].setEmail(email);
 					return true;
@@ -102,23 +114,28 @@ public class MemberController {
 		}
 		return false;
 	}
+	
 	public boolean delete(String id) {
+		Member[] result = new Member[SIZE];
 		for(int i=0; i<m.length; ++i) {
-			if(m[i] !=null) {
+			if(m[i].getId() != null) {
 				if(m[i].getId().equals(id)) {
-					m[i] = null;
+					result[i] = null;
 					return true;
 				}
 			}
 		}
 		return false;
 	}
+	
 	public void delete() {
-		for (int i = 0; i < m.length; i++) {
+		for(int i=0; i< m.length; ++i) {
 			m[i] = null;
 		}
 	}
+	
 	public Member[] printAll() {
+		
 		return m;
 	}
 }

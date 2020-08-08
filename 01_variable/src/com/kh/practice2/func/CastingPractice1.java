@@ -11,5 +11,6 @@ public class CastingPractice1 {
 		int ialpa = (int)alpa;
 		
 		System.out.print(alpa+" unicode : "+ialpa);
+		System.out.println("¾È³ç");
 	}
 }
