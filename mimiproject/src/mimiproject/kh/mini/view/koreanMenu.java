@@ -1,5 +1,5 @@
-package berger;
- 
+package mimiproject.kh.mini.view;
+
 import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Color;
@@ -12,22 +12,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
- 
-public class Hamberger {
-    int count = 0;
+
+public class koreanMenu extends JFrame{
+	int count = 0;
     String show = "";
- 
-    public Hamberger() {
- 
-        // 디자인단
+	public koreanMenu() {
+		// 디자인단
         // 프레임 설정단
-        JFrame frame = new JFrame("햄버거 자동 판매기");
-        frame.setBounds(0, 0, 625, 1000);
-        frame.setBackground(Color.black);
+        super("햄버거 자동 판매기");
+        setBounds(0, 0, 625, 1000);
+        setBackground(Color.black);
  
         // 폰트
         Font font = new Font(Font.SANS_SERIF, Font.PLAIN, 18);
@@ -43,8 +42,8 @@ public class Hamberger {
         // 배열 설정 부분
         String menu[] = { "빅맥버거", "싸이버거", "더블버거", "맘마버거", "김치버거", "새우버거", "라면버거", "치킨버거" };
         int price[] = { 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500 };
-        JButton bt[] = new JButton[menu.length];
-        TextField suja[] = new TextField[menu.length];
+        JButton bt[] = new JButton[menu.length]; //행버거 
+        TextField suja[] = new TextField[menu.length]; 
         Button minus[] = new Button[menu.length];
         Button plus[] = new Button[menu.length];
         JButton ok[] = new JButton[menu.length];
@@ -152,20 +151,22 @@ public class Hamberger {
  
         //bt3 닫기버튼
         
-        bt3.addActionListener(new ActionListener() {
+        bt3.addActionListener(new ActionListener() {  // 현재 열려있는 창만 닫기
             
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                dispose();
             }
         });
  
- 
+
+        
+        
         // 컴포넌트
-        frame.add(pNorth, BorderLayout.NORTH);
-        frame.add(ta, BorderLayout.CENTER);
-        frame.add(pSouth, BorderLayout.SOUTH);
-        frame.setVisible(true);
+        add(pNorth, BorderLayout.NORTH);
+        add(ta, BorderLayout.CENTER);
+        add(pSouth, BorderLayout.SOUTH);
+        setVisible(true);
  
         // 이벤트단
         for (int i = 0; i < menu.length; i++) {
@@ -227,19 +228,13 @@ public class Hamberger {
  
         }
  
-        // 끄기
-        frame.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        });
+//         끄기
+//        addWindowListener(new WindowAdapter() {
+//            @Override
+//            public void windowClosing(WindowEvent e) {
+//                System.exit(0);
+//            }
+//        });
     }
- 
-    // 메인
-    public static void main(String[] args) {
-        new Hamberger();
-    }
- 
+	
 }
- 

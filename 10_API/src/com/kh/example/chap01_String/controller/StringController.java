@@ -12,6 +12,7 @@ public class StringController {
 		System.out.println("str1과 str3의 주소는 같은가? : " + (str1 == str3));
 		System.out.println();
 		// hashCode() //오브젝트에 있는 메소드
+		// equals 를 통해 같은 값이 나오면 해시값도 같다
 		System.out.println("str1의 hashcode : " + str1.hashCode());
 		System.out.println("str2의 hashcode : " + str2.hashCode());
 		System.out.println("str3의 hashcode : " + str3.hashCode());
@@ -70,9 +71,9 @@ public class StringController {
 		
 		// insert(int offset, String str) 반환값 : StringBuffer
 		buffer3.insert(2, "zzz");
-		System.out.println("abc 추가 후의 buffer3 : " + buffer3);
-		System.out.println("abc 추가 후의 buffer3의 용량 : " +buffer3.capacity());
-		System.out.println("abc 추가 후의 buffer3의 길이 " + buffer3.length());
+		System.out.println("zzz 추가 후의 buffer3 : " + buffer3);
+		System.out.println("zzz 추가 후의 buffer3의 용량 : " +buffer3.capacity());
+		System.out.println("zzz 추가 후의 buffer3의 길이 " + buffer3.length());
 		
 		buffer3.reverse();
 		System.out.println("reverse 추가 후의 buffer3 : " + buffer3);
@@ -140,7 +141,7 @@ public class StringController {
 		StringTokenizer st = new StringTokenizer(str, ", ");
 		System.out.println(st.countTokens());
 		
-		while(st.hasMoreTokens()) {
+		while(st.hasMoreTokens()) { //그 다음에 토큰이 있다면 그 토큰을 나에게 출력해줘
 			System.out.println(st.nextToken());
 		}
 		

@@ -44,7 +44,7 @@ public class DateController {
 		System.out.println(sAmPm);
 		
 //		int hour = c.get(Calendar.HOUR);
-		int hour = c.get(Calendar.HOUR_OF_DAY);
+		int hour = c.get(Calendar.HOUR_OF_DAY); //24시 기준으로 몇시인지 보기
 		System.out.println(hour);
 		
 		int min = c.get(Calendar.MINUTE);

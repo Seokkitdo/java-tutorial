@@ -3,7 +3,6 @@ package com.kh.hw.person.view;
 import java.util.Scanner;
 
 import com.kh.hw.person.controller.PersonController;
-import com.kh.hw.person.model.vo.Student;
 
 public class PersonMenu {
 	private Scanner sc = new Scanner(System.in);
@@ -128,10 +127,7 @@ public class PersonMenu {
 	}
 	
 	public void printStudent(){ 
-		Student[] s = pc.printStudent();
-		for(int i=0; i<s.length; ++i) {
-			System.out.println(s[i]);
-		}
+		System.out.println(pc.printStudent());
 	}
 	
 	public void insertEmployee() {

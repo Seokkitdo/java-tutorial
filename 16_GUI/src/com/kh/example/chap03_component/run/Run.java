@@ -1,6 +1,6 @@
 package com.kh.example.chap03_component.run;
 
-import com.kh.example.chap03_component.view.J_Table;
+import com.kh.example.chap03_component.view.I_Dialog;
 
 public class Run {
 
@@ -13,8 +13,8 @@ public class Run {
 //		new F_List();
 //		new G_Spinner();
 //		new H_Slider();
-//		new I_Dialog();
-		new J_Table();
+		new I_Dialog();
+//		new J_Table();
 	}
 
 }

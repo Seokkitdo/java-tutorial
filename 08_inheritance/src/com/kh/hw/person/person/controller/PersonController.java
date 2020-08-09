@@ -31,10 +31,8 @@ public class PersonController {
 	}
 	
 	public void insertStudent(String name, int age, double height, double weight, int grade, String major) {
-		
 		for(int i=0; i<s.length; ++i) {
 			if(s[i] == null) {
-				s[i] = new Student();
 				s[i].setName(name);
 				s[i].setAge(age);
 				s[i].setHeight(height);
@@ -42,7 +40,7 @@ public class PersonController {
 				s[i].setGrade(grade);
 				s[i].setMajor(major);
 				break;
-			} else if(s[s.length-1] != null){
+			} else if(s[s.length] != null){
 				System.out.println("¸ñ·ÏÀÌ ²ËÃ¡½À´Ï´Ù.");
 			}
 		}
