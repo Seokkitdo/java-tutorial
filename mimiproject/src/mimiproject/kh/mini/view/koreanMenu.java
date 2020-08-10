@@ -25,7 +25,7 @@ public class koreanMenu extends JFrame{
 		// 디자인단
         // 프레임 설정단
         super("햄버거 자동 판매기");
-        setBounds(0, 0, 625, 1000);
+        setBounds(0, 0, 800, 1000);
         setBackground(Color.black);
  
         // 폰트
@@ -55,12 +55,12 @@ public class koreanMenu extends JFrame{
  
             // 햄버거 버튼
             bt[i] = new JButton(menu[i]);
-            if (i < 4) {
+            if (i < 5) {
                 bt[i].setBounds(25 + i * 150, 50, 100, 100);
             } else {
                 bt[i].setBounds(25 + (i - 4) * 150, 300, 100, 100);
             }
-            icon[i] = new ImageIcon(i + ".png");
+            icon[i] = new ImageIcon("image/" + i + ".png");
             bt[i].setIcon(icon[i]);
  
             // 숫자 txt 버튼
@@ -117,10 +117,11 @@ public class koreanMenu extends JFrame{
  
         // 주문버튼
         bt1.addActionListener(new ActionListener() {
- 
+        	
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, ta.getText() + " 주문되었습니다. \n이용해주셔서 감사합니다.");
+                JOptionPane.showMessageDialog(null, ta.getText() + " 주문되었습니다. "
+                		+ "총 금액은 "+ price + "\n이용해주셔서 감사합니다.");
                 for (int i = 0; i < menu.length; i++) {
                     bt[i].setEnabled(true);
                     minus[i].setEnabled(false);
