@@ -44,17 +44,17 @@ public class FoodMain extends JFrame{
 		add(select_eat_locatio);
 		
 		
-		JButton kfood_btn = new JButton(); //한식버튼
+		JButton eat_btn = new JButton(); //한식버튼
 		ImageIcon eating = new ImageIcon("image/eating.png");
-		kfood_btn.setIcon(eating);
-		kfood_btn.addActionListener(new ActionListener() { 
+		eat_btn.setIcon(eating);
+		eat_btn.addActionListener(new ActionListener() { 
 			public void actionPerformed(ActionEvent arg0) { 
 				new koreanMenu(); 
 			} 
 		}); 
-		kfood_btn.setBounds(40, 200, 185, 300); //위치조정
-		kfood_btn.setBackground(Color.white);
-		add(kfood_btn);
+		eat_btn.setBounds(40, 200, 185, 300); //위치조정
+		eat_btn.setBackground(Color.white);
+		add(eat_btn);
 		
 		
 		JButton takeOut_btn = new JButton();
@@ -62,14 +62,13 @@ public class FoodMain extends JFrame{
 		ImageIcon icon = new ImageIcon("image/takeout.jpg");
 		
         takeOut_btn.setIcon(icon);
-//        int offset = takeOut.getInsets().left;
-//        takeOut.setIcon(resizeIcon(icon, takeOut.getWidth() - offset, takeOut.getHeight() - offset));
+
         takeOut_btn.setBackground(Color.white);
 		add(takeOut_btn);
 		
 		
 
-//		
+	
 		
 		JButton manager_btn = new JButton("관리자");
 		manager_btn.setBounds(350, 600, 80, 50);
@@ -81,10 +80,6 @@ public class FoodMain extends JFrame{
 		
 	}
 
-//	private Icon resizeIcon(ImageIcon icon, int resizedWidth, int resizedHeight) {
-//		Image img = icon.getImage();  
-//	    Image resizedImage = img.getScaledInstance(resizedWidth, resizedHeight,  java.awt.Image.SCALE_SMOOTH);  
-//	    return new ImageIcon(resizedImage);
-//	}
+
 	
 }
