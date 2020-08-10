@@ -60,7 +60,7 @@ public class koreanMenu extends JFrame{
             } else {
                 bt[i].setBounds(25 + (i - 4) * 150, 300, 100, 100);
             }
-            icon[i] = new ImageIcon(i + ".png");
+            icon[i] = new ImageIcon("image/" + i + ".png");
             bt[i].setIcon(icon[i]);
  
             // 숫자 txt 버튼
