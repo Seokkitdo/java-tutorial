@@ -21,10 +21,9 @@ public class FoodMain extends JFrame{
 	public FoodMain() {
 		
 		setSize(500, 700); //메인프레임 사이즈
-//		getContentPane().setLayout(null); 
+ 
 		setLayout(null);
-//		JPanel panel = new JPanel(); // 패널 객체생성
-//		frame.getContentPane().setLayout(null);
+	
 		setLocationRelativeTo(null); //메인프레임 가운데배치
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -48,7 +47,7 @@ public class FoodMain extends JFrame{
 		ImageIcon eating = new ImageIcon("image/eating.png");
 		eat_btn.setIcon(eating);
 		eat_btn.addActionListener(new ActionListener() { 
-			public void actionPerformed(ActionEvent arg0) { 
+			public void actionPerformed(ActionEvent e) { 
 				new koreanMenu(); 
 			} 
 		}); 
