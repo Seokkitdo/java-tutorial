@@ -28,7 +28,9 @@ public class koreanMenu implements MouseListener{
 		// 디자인단
         // 프레임 설정단
 		JFrame frame = new JFrame();
-		frame.setLayout(null);
+		frame.getContentPane().setLayout(null);
+		
+		frame.getContentPane().setBackground(new Color(37, 23, 22));
 		frame.setSize(1300, 800);
 		
 		
@@ -37,7 +39,7 @@ public class koreanMenu implements MouseListener{
 		
 		Title.setForeground(Color.white);
 		Title.setBounds(600, 20, 500, 40);
-		frame.add(Title);
+		frame.getContentPane().add(Title);
 		
 		
 		String[] category_name = {"한식", "중식", "양식", "일식"};
@@ -51,7 +53,7 @@ public class koreanMenu implements MouseListener{
 			category_bt[i].setBackground(new Color(0,14,39));
 			category_bt[i].setForeground(Color.white);
 
-			frame.add(category_bt[i]);
+			frame.getContentPane().add(category_bt[i]);
 		}
 		
 		
@@ -59,8 +61,15 @@ public class koreanMenu implements MouseListener{
 		JPanel foodPanel = new JPanel(); // 공통패널
 		foodPanel.setBounds(12, 172, 713, 560);
 		foodPanel.setLayout(null);
-//		foodPanel.setBackground(new Color(37, 23, 22));
-		foodPanel.setBackground(Color.BLUE);
+		foodPanel.setBackground(new Color(37, 23, 22));
+//		foodPanel.setBackground(Color.BLUE);
+		
+//		JPanel result_panel = new JPanel();
+//		result_panel.setBounds(759, 608, 461, 122);
+//		result_panel.setLayout(null);
+//		result_panel.setBackground(new Color(37,23,22));
+		
+		
 		
 		
 
@@ -89,16 +98,17 @@ public class koreanMenu implements MouseListener{
             } else {
                 menu_btn[i].setBounds(20 + ((i-3) * 224), 285, 202, 187);
             }
-//            icon[i] = new ImageIcon("image/" + i + ".png");
-//            bt[i].setIcon(icon[i]);
+            icon[i] = new ImageIcon("image/" + i + ".png");
+            menu_btn[i].setIcon(icon[i]);
             
 
-         // 편의상 앞으로의 좌표 설정은 음식버튼을 기준으로 설정할 것
+      
 
             // 수량 부분
             amount[i] = new TextField("0");
             amount[i].setBackground(Color.white);
             amount[i].setEditable(false);
+//            amount[i].
             amount[i].setBounds(menu_btn[i].getX() + 80, menu_btn[i].getY() + 220 , 40, 20);
             
             
@@ -185,7 +195,7 @@ public class koreanMenu implements MouseListener{
                 @Override
                 public void actionPerformed(ActionEvent e) { 
                     show = menu_btn[j].getActionCommand();
-                    ta.append("   " + show + "       " + price[j] + "        " + count + "         " + price[j] * count
+                    ta.append(" 	  " + show + "       	" + price[j] + "        	" + count + "         	" + price[j] * count
                             + "원" + "\n");
                     ok[j].setEnabled(false);
                 }
@@ -193,21 +203,67 @@ public class koreanMenu implements MouseListener{
  
         }
         
-        menu_btn[0].addActionListener(new ActionListener() {  
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				JButton btn = new JButton();
-				btn.setBounds(770,30,100,100);
-				
-				JLabel lb = new JLabel(menu_btn[0].getText());
-				lb.setBounds(770, 172, 450, 420);
-				ta.append(menu[0]);
-				
-				frame.add(btn);
-			}
-		});
+      
 
-		
+        Button order = new Button("주문");
+        
+        Button reset = new Button("초기화");
+        
+        Button close = new Button("닫기");
+
+        order.setBounds(789,647,97,23);
+        reset.setBounds(943,647,97,23);
+        close.setBounds(1111,647,97,23);
+        
+        
+        frame.getContentPane().add(order);
+        frame.getContentPane().add(reset);
+        frame.getContentPane().add(close);
+        
+        // order 주문버튼
+        order.addActionListener(new ActionListener() {
+ 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showMessageDialog(null, ta.getText() + " 주문되었습니다. \n이용해주셔서 감사합니다.");
+                for (int i = 0; i < menu.length; i++) {
+                    menu_btn[i].setEnabled(true);
+                    minus[i].setEnabled(false);
+                    plus[i].setEnabled(false);
+                    amount[i].setText("0");
+                    ta.setText("   	  " + "상품명" + "      	+ "+ "단가" +  "      " + " 수량 " + "			"  + " 합계" + "\n\n");
+ 
+                }
+            }
+        });
+ 
+        // reset 초기화 버튼
+        reset.addActionListener(new ActionListener() {
+ 
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                for (int i = 0; i < menu.length; i++) {
+                    menu_btn[i].setEnabled(true);
+                    minus[i].setEnabled(false);
+                    plus[i].setEnabled(false);
+                    amount[i].setText("0");
+                    ta.setText("   상품명        단가        수량        합계\n\n");
+ 
+                }
+            }
+        });
+ 
+ 
+        //close 닫기버튼
+        
+        close.addActionListener(new ActionListener() {
+            
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+            }
+        });
+ 
 		
 		
 		
@@ -219,11 +275,24 @@ public class koreanMenu implements MouseListener{
         
         
         
-        frame.add(foodPanel); // 음식들을 모아놓은 페널
-		frame.add(ta); // 음식의 수량을 정하고 확인을 누를 경우 textArea 칸에 뜨는 화면을 프레임이 볼 수 있도록 해주는 작업
+        frame.getContentPane().add(foodPanel); // 음식들을 모아놓은 페널
+		frame.getContentPane().add(ta); // 음식의 수량을 정하고 확인을 누를 경우 textArea 칸에 뜨는 화면을 프레임이 볼 수 있도록 해주는 작업
 		ta.setEditable(false); // textArea 수정 불가능
 		
-		frame.getContentPane().setBackground(new Color(37, 23, 22)); //frame 색상지정
+	
+		
+		JButton btnNewButton = new JButton("New button");
+		btnNewButton.setBounds(789, 647, 97, 23);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton button = new JButton("New button");
+		button.setBounds(943, 647, 97, 23);
+		frame.getContentPane().add(button);
+		
+		JButton button_1 = new JButton("New button");
+		button_1.setBounds(1111, 647, 97, 23);
+		frame.getContentPane().add(button_1);
+		
 		
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE); //x버튼 누를시 종료
 		frame.setVisible(true);	//frame에 그려진 것들을 시각적으로 보는 것
