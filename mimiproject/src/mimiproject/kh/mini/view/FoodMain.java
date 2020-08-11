@@ -35,12 +35,12 @@ public class FoodMain extends JFrame{
 		add(mainTitle);
 		
 		
-		JLabel select_eat_locatio = new JLabel("식사하실 장소를 선택해 주세요");
-		select_eat_locatio.setForeground(Color.white);
-		select_eat_locatio.setFont(new Font("돋움", Font.PLAIN, 30)); // 메인타이틀 글자 굵게
-		select_eat_locatio.setFont(select_eat_locatio.getFont().deriveFont(15.0f)); //메인타이틀 글자크기조정
-		select_eat_locatio.setBounds(150, 150, 500, 50); // 메인타이틀 위치
-		add(select_eat_locatio);
+		JLabel select_eat_location = new JLabel("식사하실 장소를 선택해 주세요");
+		select_eat_location.setForeground(Color.white);
+		select_eat_location.setFont(new Font("돋움", Font.PLAIN, 30)); // 메인타이틀 글자 굵게
+		select_eat_location.setFont(select_eat_location.getFont().deriveFont(15.0f)); //메인타이틀 글자크기조정
+		select_eat_location.setBounds(150, 150, 500, 50); // 메인타이틀 위치
+		add(select_eat_location);
 		
 		
 		JButton eat_btn = new JButton(); //한식버튼
@@ -58,6 +58,11 @@ public class FoodMain extends JFrame{
 		
 		JButton takeOut_btn = new JButton();
 		takeOut_btn.setBounds(255, 200, 185, 300);
+		takeOut_btn.addActionListener(new ActionListener() { 
+			public void actionPerformed(ActionEvent e) { 
+				new koreanMenu(); 
+			} 
+		}); 
 		ImageIcon icon = new ImageIcon("image/takeout.jpg");
 		
         takeOut_btn.setIcon(icon);

@@ -64,12 +64,12 @@ public class Hamberger {
             icon[i] = new ImageIcon(i + ".png");
             bt[i].setIcon(icon[i]);
  
-            // 숫자 txt 버튼
+//             숫자 txt 버튼
             suja[i] = new TextField("0");
             suja[i].setBackground(Color.white);
             suja[i].setEditable(false);
             suja[i].setBounds(bt[i].getX() + 30, bt[i].getY() + 130, 40, 20);
- 
+// 
             // "-" 버튼
             minus[i] = new Button("-");
             minus[i].setBounds(bt[i].getX(), suja[i].getY(), 20, 20);
