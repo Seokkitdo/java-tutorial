@@ -74,7 +74,7 @@ public class koreanMenu implements MouseListener{
 		
 
 		TextArea ta = new TextArea();
-		ta.setText("   상품명        단가        수량        합계\n\n");
+		ta.setText("       " + "상품명" + "        " + "단가" + "         " + "수량" + "         " + "합계 " + "\n\n");
 		ta.setBackground(new Color(245,242,237));
 		ta.setBounds(770, 172, 450, 420);
 		frame.getContentPane().add(ta);
@@ -231,7 +231,7 @@ public class koreanMenu implements MouseListener{
                     minus[i].setEnabled(false);
                     plus[i].setEnabled(false);
                     amount[i].setText("0");
-                    ta.setText("   	  " + "상품명" + "      	+ "+ "단가" +  "      " + " 수량 " + "			"  + " 합계" + "\n\n");
+                    ta.setText("   	  " + "상품명" + "      "	+ "단가" +  "      " + " 수량 " + "			"  + " 합계" + "\n\n");
  
                 }
             }
@@ -325,7 +325,9 @@ public class koreanMenu implements MouseListener{
 	
 	@Override
 	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
+		JButton b = (JButton)e.getSource();
+        b.setBackground(new Color(223,195,130));
+        b.setForeground(Color.black);
 		
 	}
 

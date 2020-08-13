@@ -1,4 +1,4 @@
-package com.kh.hw.person.model.vo;
+package com.kh.hw.person.person.model.vo;
 
 public class Employee extends Person{
 	private int salary;

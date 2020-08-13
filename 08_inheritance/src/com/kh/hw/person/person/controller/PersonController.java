@@ -1,4 +1,4 @@
-package com.kh.hw.person.controller;
+package com.kh.hw.person.person.controller;
 
 
 import com.kh.hw.person.model.vo.Employee;

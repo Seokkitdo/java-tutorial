@@ -1,4 +1,4 @@
-package com.kh.hw.person.model.vo;
+package com.kh.hw.person.person.model.vo;
 
 public class Student extends Person{
 	private int grade;

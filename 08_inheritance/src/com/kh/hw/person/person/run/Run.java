@@ -1,4 +1,4 @@
-package com.kh.hw.person.run;
+package com.kh.hw.person.person.run;
 
 import com.kh.hw.person.view.PersonMenu;
 
